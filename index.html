@@ -4,14 +4,52 @@
 <head>
   <meta charset="utf-8">
   <title>stopwatch</title>
+  <style>
+    .counter {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .counter-container {
+      width: 300px;
+      margin: auto;
+      background-color: #ddd;
+      padding: 20px;
+    }
+
+    button {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 4px solid #999;
+      margin: 0 10px;
+      display: block;
+      float:left;
+    }
+
+    button:focus {outline:0;}
+
+    p {
+      margin: 0;
+    }
+
+    .button-container {
+      width:160px;
+      height: 60px;
+      margin:auto;
+    }
+  </style>
 </head>
 
 <body>
-  <div>
-    <span id="minutes">00</span><span>:</span><span id="seconds">00</span>
+  <div class="counter-container">
+    <p class="counter"><span id="minutes">00</span><span>:</span><span id="seconds">00</span></p>
+    <div class="button-container">
+      <button type="button" id="my-button" name="button">start</button>
+      <button type="button" id="reset-button" name="button">reset</button>
+    </div>
   </div>
-  <p><button type="button" id="my-button" name="button">start</button></p>
-  <p><button type="button" id="reset-button" name="button">reset</button></p>
   <!-- My Javascript-->
 
   <script src="stopwatch.js"></script>
